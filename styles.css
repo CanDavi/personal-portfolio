@@ -8,7 +8,7 @@ body {
 }
 
 a {
-    color: #00aaff;
+    color: red;
     text-decoration: none;
 }
 
@@ -262,7 +262,7 @@ h3, p {
 .project-card img {
     width: 100%;
     border-radius: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 0px;
 }
 
 .project-card h3 {
@@ -281,7 +281,7 @@ h3, p {
 .project-card .btn {
     display: inline-block;
     padding: 10px 20px;
-    background: #007BFF;
+    background: red;
     color: #fff;
     border-radius: 25px;
     text-decoration: none;
@@ -297,6 +297,7 @@ h3, p {
     transform: translateY(-8px);
     box-shadow: 0 15px 25px rgba(0,170,255,0.4);
 }
+
 
 /* -------------------- Card Border Animation -------------------- */
 @keyframes border-move {
