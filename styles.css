@@ -1,8 +1,11 @@
 /* -------------------- Global Styles -------------------- */
 body {
-    background-color: #33333b; /* soft black background */
-    color: #ffffff; /* main text white */
-    font-family: 'Josefin Sans', sans-serif; /* updated font */
+    background-color: #33333b;
+    /* soft black background */
+    color: #ffffff;
+    /* main text white */
+    font-family: 'Josefin Sans', sans-serif;
+    /* updated font */
     margin: 0;
     padding: 0;
 }
@@ -22,19 +25,23 @@ a:hover {
 #education,
 #projects,
 #contact {
-    background-color: #33333b; /* dark background for all sections */
-    padding: 60px 20px; /* reduced from 80px */
+    background-color: #33333b;
+    /* dark background for all sections */
+    padding: 60px 20px;
+    /* reduced from 80px */
     text-align: center;
 }
 
 /* -------------------- Section Headings -------------------- */
 h2 {
     color: #ffffff;
-    font-size: 3rem; /* bigger headings */
+    font-size: 3rem;
+    /* bigger headings */
     margin-bottom: 40px;
 }
 
-h3, p {
+h3,
+p {
     color: #ffffff;
 }
 
@@ -64,7 +71,8 @@ h3, p {
     justify-content: space-between;
     max-width: 1200px;
     width: 100%;
-    gap: 60px; /* reduced gap between left & right */
+    gap: 60px;
+    /* reduced gap between left & right */
 }
 
 /* -------------------- Hero Left -------------------- */
@@ -74,7 +82,8 @@ h3, p {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    gap: 15px; /* slightly tighter spacing */
+    gap: 15px;
+    /* slightly tighter spacing */
 }
 
 .hero-title {
@@ -113,12 +122,17 @@ h3, p {
 .hero-right {
     flex: 1;
     display: flex;
-    justify-content: center; /* centers diamonds within this container */
-    align-items: flex-start; /* top align */
-    gap: 40px;               /* space between diamonds */
+    justify-content: center;
+    /* centers diamonds within this container */
+    align-items: flex-start;
+    /* top align */
+    gap: 40px;
+    /* space between diamonds */
     position: relative;
-    margin-top: 250px;        /* lower under surname */
-    margin-left: -300px;       /* move the whole diamond group to the left */
+    margin-top: 250px;
+    /* lower under surname */
+    margin-left: -300px;
+    /* move the whole diamond group to the left */
 }
 
 
@@ -146,26 +160,38 @@ h3, p {
 
 /* Diamond Spin Animation */
 @keyframes spin {
-    0% { transform: rotate(45deg) rotateY(0deg); }
-    100% { transform: rotate(45deg) rotateY(360deg); }
+    0% {
+        transform: rotate(45deg) rotateY(0deg);
+    }
+
+    100% {
+        transform: rotate(45deg) rotateY(360deg);
+    }
 }
 
 /* About Section */
 #about {
-    padding: 60px 20px; /* slightly reduced spacing */
+    padding: 60px 20px;
+    /* slightly reduced spacing */
     text-align: center;
 }
 
 .about-container {
-    max-width: 900px; /* keeps text guided and readable */
-    margin: 0 auto;    /* centers the content */
-    text-align: left;  /* left-aligned like your other sections */
-    line-height: 1.7;  /* improves readability */
-    font-size: 1.5rem; /* slightly bigger font */
+    max-width: 900px;
+    /* keeps text guided and readable */
+    margin: 0 auto;
+    /* centers the content */
+    text-align: left;
+    /* left-aligned like your other sections */
+    line-height: 1.7;
+    /* improves readability */
+    font-size: 1.5rem;
+    /* slightly bigger font */
 }
 
 #about h2 {
-    font-size: 3rem;   /* matches other section headings */
+    font-size: 3rem;
+    /* matches other section headings */
     margin-bottom: 30px;
     text-align: center;
 }
@@ -185,11 +211,12 @@ h3, p {
     border-radius: 15px;
     padding: 30px 20px;
     width: 180px;
-    box-shadow: 0 8px 20px rgba(0,170,255,0.2);
+    box-shadow: 0 8px 20px rgba(0, 170, 255, 0.2);
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .tech-card img {
+    object-fit: cover;
     width: 60px;
     height: 60px;
     margin-bottom: 15px;
@@ -206,7 +233,7 @@ h3, p {
 
 .tech-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 15px 25px rgba(0,170,255,0.4);
+    box-shadow: 0 15px 25px rgba(0, 170, 255, 0.4);
 }
 
 
@@ -216,7 +243,8 @@ h3, p {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 20px; /* increased spacing to match tech-stack */
+    gap: 20px;
+    /* increased spacing to match tech-stack */
 }
 
 .education-card img {
@@ -237,14 +265,25 @@ h3, p {
 /* Hover effect for education cards inside card-border */
 .card-border:hover .education-card {
     transform: translateY(-8px);
-    box-shadow: 0 15px 25px rgba(0,170,255,0.4);
+    box-shadow: 0 15px 25px rgba(0, 170, 255, 0.4);
 }
 
 /* -------------------- Project Cards -------------------- */
-.projects-row {
+
+#projects {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+}
+
+#projects .container {
+    width: 50%;
+    white-space: wrap;
+}
+
+.projects-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    justify-content: center;
     gap: 20px;
 }
 
@@ -252,17 +291,22 @@ h3, p {
     background: #a39db8;
     border-radius: 15px;
     padding: 30px 20px;
-    flex: 0 0 400px;
-    max-width: 90%;
-    box-shadow: 0 8px 20px rgba(0,170,255,0.2);
+    box-shadow: 0 8px 20px rgba(0, 170, 255, 0.2);
     transition: transform 0.3s, box-shadow 0.3s;
     text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.img-p {
+    position: relative;
+    width: 100%;
+    background: red;
 }
 
 .project-card img {
-    width: 100%;
     border-radius: 10px;
-    margin-bottom: 0px;
+    object-fit: cover;
 }
 
 .project-card h3 {
@@ -295,21 +339,29 @@ h3, p {
 
 .project-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 15px 25px rgba(0,170,255,0.4);
+    box-shadow: 0 15px 25px rgba(0, 170, 255, 0.4);
 }
 
 
 /* -------------------- Card Border Animation -------------------- */
 @keyframes border-move {
-    0% { background-position: 0 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0 50%; }
+    0% {
+        background-position: 0 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0 50%;
+    }
 }
 
 .card-border {
     background-size: 200% 200%;
     background-position-y: 50%;
-    background-image: linear-gradient(90deg, rgb(35, 142, 199), #33333b,rgb(35, 142, 199));
+    background-image: linear-gradient(90deg, rgb(35, 142, 199), #33333b, rgb(35, 142, 199));
     animation: 4s linear infinite border-move;
     padding: 4px;
     border-radius: 20px;
@@ -320,7 +372,7 @@ h3, p {
     border-radius: 15px;
     padding: 30px 20px;
     width: 220px;
-    box-shadow: 0 8px 20px rgba(0,170,255,0.2);
+    box-shadow: 0 8px 20px rgba(0, 170, 255, 0.2);
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -338,7 +390,8 @@ h3, p {
 
     .hero-title {
         font-size: 2.5rem;
-        white-space: normal; /* allow wrapping */
+        white-space: normal;
+        /* allow wrapping */
     }
 
     .subtitle {
@@ -348,18 +401,31 @@ h3, p {
     .hero-right {
         margin: 50px 0 0 0;
     }
+
+    #projects .container {
+        width: 100%;
+    }
+
+    .projects-row {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
 }
 
 @media (max-width: 768px) {
+
     /* Stack diamonds vertically and scale down */
     .hero-right {
         display: flex;
-        flex-direction: row; /* or column if you want vertical stack */
+        flex-direction: row;
+        /* or column if you want vertical stack */
         justify-content: center;
         align-items: center;
-        flex-wrap: wrap;   /* allows wrapping */
-        gap: 20px;         /* space between diamonds */
-        margin: 50px 0 0 0; /* adjust spacing */
+        flex-wrap: wrap;
+        /* allows wrapping */
+        gap: 20px;
+        /* space between diamonds */
+        margin: 50px 0 0 0;
+        /* adjust spacing */
     }
 
     /* Scale down big diamond */
